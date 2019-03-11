@@ -2,6 +2,10 @@
 	"name": "vscode-perl6-atom-grammar",
 	"displayName": "Perl 6 Atom Grammar",
 	"description": "Perl 6 syntax converted from perl 6 team's atom grammar",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/chee/vscode-perl6-atom-grammar"
+	},
 	"version": "0.0.1",
 	"publisher": "chee",
 	"engines": {
