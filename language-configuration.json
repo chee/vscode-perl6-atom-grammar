@@ -1,10 +1,6 @@
 {
 	"comments": {
-		"lineComment": "#",
-		"blockComment": [
-			"#`(",
-			")"
-		]
+		"lineComment": "#"
 	},
 	"brackets": [
 		["{", "}"],
@@ -35,5 +31,9 @@
 		["`", "`"],
 		["｢", "｣"],
 		["<", ">"]
-	]
+	],
+	"indentationRules": {
+		"increaseIndentPattern": "^.*\\{\\}?\\s*$",
+		"decreaseIndentPattern": "^\\s*\\}"
+	}
 }
