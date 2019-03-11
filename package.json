@@ -1,0 +1,79 @@
+{
+	"name": "vscode-perl6-atom-grammar",
+	"displayName": "Perl 6 Atom Grammar",
+	"description": "Perl 6 syntax converted from perl 6 team's atom grammar",
+	"version": "0.0.1",
+	"publisher": "chee",
+	"engines": {
+		"vscode": "^1.28.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "Perl 6 FE",
+				"aliases": [
+					"Perl 6",
+					"perl6",
+					"six",
+					"p6",
+					"nqp"
+				],
+				"extensions": [
+					"p6",
+					"pl6",
+					"pm6",
+					"t",
+					"t6",
+					"pod6",
+					"nqp"
+				],
+				"firstLine": "(^#!.*\\bperl6\\b)|use\\s+v6",
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "Quoting (Perl 6)"
+			},
+			{
+				"id": "Regular Expressions (Perl 6)"
+			},
+			{
+				"id": "META.info",
+				"filenames": [
+					"META.info",
+					"META6.json"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "Perl 6 FE",
+				"scopeName": "source.perl6fe",
+				"path": "./syntaxes/perl6fe.json"
+			},
+			{
+				"language": "Quoting (Perl 6)",
+				"scopeName": "source.quoting.perl6fe",
+				"path": "./syntaxes/perl6fe.quoting.json"
+			},
+			{
+				"language": "Regular Expressions (Perl 6)",
+				"scopeName": "source.regexp.perl6fe",
+				"path": "./syntaxes/perl6fe.regexp.json"
+			},
+			{
+				"language": "META.info",
+				"scopeName": "source.meta-info",
+				"path": "./syntaxes/meta-info.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"cson-parser": "^4.0.2"
+	},
+	"scripts": {
+		"update": "node ./build/update-grammar.js perl6/atom-language-perl6 grammars/perl6fe.cson ./syntaxes/perl6fe.json && node ./build/update-grammar.js perl6/atom-language-perl6 grammars/perl6fe.quoting.cson ./syntaxes/perl6fe.quoting.json && node ./build/update-grammar.js perl6/atom-language-perl6 grammars/perl6fe.regexp.cson ./syntaxes/perl6fe.regexp.json && node ./build/update-grammar.js perl6/atom-language-perl6 grammars/meta-info.cson ./syntaxes/meta-info.json"
+	}
+}
