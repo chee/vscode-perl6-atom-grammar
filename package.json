@@ -79,5 +79,8 @@
 	},
 	"scripts": {
 		"update": "node ./build/update-grammar.js perl6/atom-language-perl6 grammars/perl6fe.cson ./syntaxes/perl6fe.json && node ./build/update-grammar.js perl6/atom-language-perl6 grammars/perl6fe.quoting.cson ./syntaxes/perl6fe.quoting.json && node ./build/update-grammar.js perl6/atom-language-perl6 grammars/perl6fe.regexp.cson ./syntaxes/perl6fe.regexp.json && node ./build/update-grammar.js perl6/atom-language-perl6 grammars/meta-info.cson ./syntaxes/meta-info.json"
+	},
+	"dependencies": {
+		"nextstep-plist": "^0.4.1"
 	}
 }
